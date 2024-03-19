@@ -14,13 +14,13 @@ const ProductItem = ({ id, name, image, description, price, onAddToCart }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md p-4 text-center">
-      <img src={image} alt={name} className="h-40 w-full object-cover" />
-      <div className="mt-4">
+    <div className="bg-white rounded-lg overflow-hidden shadow-lg border p-4">
+      <img src={image} alt={name} className="h-25 w-full object-cover" />
+      <div className="mt-4 text-center">
         <h2 className="text-lg font-semibold">{name}</h2>
         <p className="text-gray-600">{description}</p>
         <p className="mt-2 font-bold">${price}</p>
-        <div className="flex justify-center items-center mt-4">
+        {/* <div className="flex items-center mt-4">
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded-l focus:outline-none focus:shadow-outline"
             onClick={decrementQuantity}
@@ -39,7 +39,7 @@ const ProductItem = ({ id, name, image, description, price, onAddToCart }) => {
           >
             +
           </button>
-        </div>
+        </div> */}
         <button
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           onClick={() => onAddToCart({ id, name, price, quantity })}
